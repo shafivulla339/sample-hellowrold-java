@@ -1,4 +1,4 @@
-#new workflow
+#workflow
 name: CI
 on:
   push:
