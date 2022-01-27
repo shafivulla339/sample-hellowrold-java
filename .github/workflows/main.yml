@@ -27,6 +27,6 @@ jobs:
           echo "-------"
           ls '${{ github.workspace }}'
           echo "-------"
-          ls '${{ github.workspace }}'/build
+          ls '${{ github.workspace }}'/build/libs
           echo "-------"
           ls /home/runner/work/
