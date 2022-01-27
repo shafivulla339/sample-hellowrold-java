@@ -24,6 +24,9 @@ jobs:
         with:
           arguments: build
       - run: |
+          echo "-------"
           ls '${{ github.workspace }}'
+          echo "-------"
           ls '${{ github.workspace }}'/src
+          echo "-------"
           ls /home/runner/work/
