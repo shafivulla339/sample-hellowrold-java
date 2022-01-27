@@ -25,8 +25,26 @@ jobs:
           arguments: build
       - run: |
           echo "-------"
-          ls '${{ github.workspace }}'
-          echo "-------"
           ls '${{ github.workspace }}'/build/libs
-          echo "-------"
-          ls /home/runner/work/
+
+          
+      - name: Step5 Jfrog artifactory
+        uses: jfrog/setup-jfrog-cli@v2.0.0
+      #- run: jfrog rt ping --url https://www.google.co.in/
+        
+      - name: Step6 :sonarqube Scan code
+        uses: vtex/action-sonarqube@main
+        #with:
+          #githubToken: ${{ secrets.GITHUB_TOKEN }} # https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
+          #host: ${{ secrets.SQHost }} # Variable set in the Github Secrets
+          #token: ${{ secrets.SQToken }} # Variable set in the Github Secrets
+        
+      - name: Step 7 - Deploy to CF
+        uses: jhunt/cf-push@v1
+        with:
+          api: https://api.cf.ap21.hana.ondemand.com
+          username: ramyaravindra999@gmail.com
+          password: ${{ secrets.CF_PASSWORD }} #passing password through secrets
+          org: 6fece677trial
+          space: prod
+          manifest: manifest.yml
