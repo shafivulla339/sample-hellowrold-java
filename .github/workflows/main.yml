@@ -44,7 +44,7 @@ jobs:
         with:
           api: https://api.cf.ap21.hana.ondemand.com
           username: ramyaravindra999@gmail.com
-          password: ${{ secrets.CF_PASSWORD }} #passing password through secrets
+          password: Azuredevops@123 #passing password through secrets
           org: 6fece677trial
           space: prod
           manifest: manifest.yml
