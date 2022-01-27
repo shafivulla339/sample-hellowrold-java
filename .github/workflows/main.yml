@@ -39,12 +39,3 @@ jobs:
           #host: ${{ secrets.SQHost }} # Variable set in the Github Secrets
           #token: ${{ secrets.SQToken }} # Variable set in the Github Secrets
         
-      - name: Step 7 - Deploy to CF
-        uses: jhunt/cf-push@v1
-        with:
-          api: https://api.cf.ap21.hana.ondemand.com
-          username: ramyaravindra999@gmail.com
-          password: Azuredevops@123 #passing password through secrets
-          org: 6fece677trial
-          space: prod
-          manifest: manifest.yml
