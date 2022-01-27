@@ -26,4 +26,4 @@ jobs:
       - run: |
           ls '${{ github.workspace }}'
           ls '${{ github.workspace }}'/src
-          ls /home/runner/work/gradle-github-actions-example
+          ls /home/runner/work/
