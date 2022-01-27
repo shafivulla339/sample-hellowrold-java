@@ -2,7 +2,7 @@ name: Pipeline
 
 on:
   push:
-    branches: [ branch_graddlebuild ]
+    branches: [ master ]
     
 #starting buildjob
 jobs:
