@@ -7,7 +7,7 @@ on:
 #starting buildjob
 jobs:
   build:
-    runs-on: [self-hosted, linux, x64 shr1]
+    runs-on: [self-hosted, linux, x64, shr1]
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Step 1 - Checkout main branch from GitHub 
