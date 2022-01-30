@@ -33,8 +33,8 @@ jobs:
         uses: jfrog/setup-jfrog-cli@v2.0.0
       #- run: jfrog rt ping --url https://www.google.co.in/
         
-      - name: Step6 :sonarqube Scan code
-        uses: vtex/action-sonarqube@main
+      #- name: Step6 :sonarqube Scan code
+        #uses: vtex/action-sonarqube@main
         #with:
           #githubToken: ${{ secrets.GITHUB_TOKEN }} # https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           #host: ${{ secrets.SQHost }} # Variable set in the Github Secrets
