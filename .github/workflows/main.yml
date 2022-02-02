@@ -2,8 +2,8 @@
 name: Pipeline
 
 on:
-  push:
-    branches: [ master ]
+  pull_request:
+    branches: [ workitem1 ]
     
 #starting buildjob
 jobs:
