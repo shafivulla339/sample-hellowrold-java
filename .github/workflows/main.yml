@@ -22,7 +22,8 @@ jobs:
           
       - name: Perform SAST Scan
         run: |
-          scancentral -url ${SC_CONTROLLER_URL} start $BUILD_OPTS -upload -application
+          scancentral -version
+          #scancentral -url ${SC_CONTROLLER_URL} start $BUILD_OPTS -upload -application
         env:
           #SC_CONTROLLER_URL: ${{ secrets.SC_CONTROLLER_URL }}
           #SSC_UPLOAD_TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
