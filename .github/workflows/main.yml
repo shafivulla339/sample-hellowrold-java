@@ -19,6 +19,22 @@ jobs:
         with:
           version: 21.2.0  
           #client-auth-token: ${{ secrets.CLIENT_AUTH_TOKEN }}
+          
+      - name: Perform SAST Scan
+        run: |
+          scancentral -url ${SC_CONTROLLER_URL} start $BUILD_OPTS -upload -application
+        env:
+          #SC_CONTROLLER_URL: ${{ secrets.SC_CONTROLLER_URL }}
+          #SSC_UPLOAD_TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
+          #APPLICATION: "My Application"
+          VERSION: "1.0"
+          #BUILD_OPTS: "-bt mvn"
+      - name: Save ScanCentral Logs
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: scancentral-logs
+          path: ~/.fortify/scancentral/log
     
         
       # Runs a single command using the runners shell
