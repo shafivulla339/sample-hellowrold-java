@@ -3,7 +3,7 @@ name: Pipeline
 
 on:
   pull_request:
-    branches: [ workitem1 ]
+    branches: [ integration ]
     
 #starting buildjob
 jobs:
