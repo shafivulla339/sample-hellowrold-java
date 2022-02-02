@@ -2,8 +2,8 @@
 name: Pipeline
 
 on:
-  pull_request:
-    branches: [ master,integration ]
+  push:
+    branches: [ master ]
     
 #starting buildjob
 jobs:
@@ -13,6 +13,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Step 1 - Checkout main branch from GitHub 
         uses: actions/checkout@v2
+        
+      - name: Download Fortify ScanCentral Client
+        uses: fortify/gha-setup-scancentral-client@v1
+        #with:
+          #version: 21.2.0  
+          #client-auth-token: ${{ secrets.CLIENT_AUTH_TOKEN }}
+    
         
       # Runs a single command using the runners shell
       - name: Step 2 - Set up JDK 1.8
