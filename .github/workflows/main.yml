@@ -2,13 +2,13 @@
 name: Pipeline
 
 on:
-  push:
-    branches: [ master ]
+  pull_request:
+    branches: [ master,integration ]
     
 #starting buildjob
 jobs:
   build:
-    runs-on: [self-hosted]
+    runs-on: [ubuntu-latest]
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Step 1 - Checkout main branch from GitHub 
