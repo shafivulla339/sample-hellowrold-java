@@ -1,5 +1,5 @@
 ---
 applications:
 - name: cfnewfile
-  path: /github/workspace/build/libs/gradle-github-actions-example.jar
+  path: /github/workspace/gs-spring-boot-0.1.0.jar
   #buildpack: https://github.com/cloudfoundry/java-buildpack.git
