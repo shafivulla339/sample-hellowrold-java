@@ -5,4 +5,4 @@ applications:
   path: /github/workspace/build/libs/gradle-github-actions-example.jar
   instances: 1
   buildpacks: sap_java_buildpack
-  ...
+  ---
