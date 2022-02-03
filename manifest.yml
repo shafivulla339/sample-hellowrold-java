@@ -1,6 +1,7 @@
 ---
 applications:
-- name: sample
+- name: application-name
+  memory: 128M
   path: /github/workspace/build/libs/gradle-github-actions-example.jar
+  instances: 1
   buildpacks: sap_java_buildpack
-...
