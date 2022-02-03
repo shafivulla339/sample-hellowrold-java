@@ -50,7 +50,7 @@ jobs:
           arguments: build
       - run: |
           echo "-------"
-          dir '${{ github.workspace }}'/build/libs
+          #dir '${{ github.workspace }}'/build/libs
 
           
       - name: Step5 Jfrog artifactory
