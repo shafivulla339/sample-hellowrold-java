@@ -1,6 +1,6 @@
 ---
 applications:
-- name: Sample
+- name: sample
   path: /github/workspace/build/libs/gradle-github-actions-example.jar
- buildpacks: sap_java_buildpack
+buildpacks: sap_java_buildpack
 ...
