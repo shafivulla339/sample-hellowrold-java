@@ -1,5 +1,5 @@
 ---
 applications:
 - name: springbootfile
-  path: /github/workspace/gs-spring-boot-0.1.0.jar
+  path: /github/workspace/build/libs/gradle-github-actions-example.jar
   #buildpacks: https://github.com/cloudfoundry/java-buildpack.git
