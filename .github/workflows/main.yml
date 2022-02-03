@@ -8,7 +8,7 @@ on:
 #starting buildjob
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Step 1 - Checkout main branch from GitHub 
@@ -50,7 +50,7 @@ jobs:
           arguments: build
       - run: |
           echo "-------"
-          #dir '${{ github.workspace }}'/build/libs
+          ls '${{ github.workspace }}'/build/libs
 
           
       - name: Step5 Jfrog artifactory
