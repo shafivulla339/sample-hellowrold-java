@@ -1,4 +1,4 @@
 ---
 applications:
 - name: application-name-final
-  path: /github/workspace/src/gs-spring-boot-0.1.0.jar
+  path: /github/workspace/src/gradle-github-actions-example.jar
