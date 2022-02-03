@@ -2,4 +2,4 @@
 applications:
 - name: cfnewfile
   path: /github/workspace/build/libs/gradle-github-actions-example.jar
-  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  #buildpack: https://github.com/cloudfoundry/java-buildpack.git
