@@ -1,5 +1,5 @@
 ---
 applications:
-- name: cfnewfile
+- name: springboot file
   path: /github/workspace/gs-spring-boot-0.1.0.jar
   #buildpack: https://github.com/cloudfoundry/java-buildpack.git
