@@ -2,4 +2,5 @@
 applications:
 - name: springbootfile
   path: /github/workspace/build/libs/gradle-github-actions-example.jar
+  build-result: target/*.jar
   #buildpacks: https://github.com/cloudfoundry/java-buildpack.git
