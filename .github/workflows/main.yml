@@ -65,7 +65,7 @@ jobs:
           #token: ${{ secrets.SQToken }} # Variable set in the Github Secrets
         
       - name: Step 7 - Deploy to CF
-        uses: elliottpope/cloudfoundry-cli-action@v7
+        uses: jhunt/cf-push@v1
         with:
           api: https://api.cf.ap21.hana.ondemand.com
           username: ramyaravindra999@gmail.com
