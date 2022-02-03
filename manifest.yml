@@ -1,6 +1,6 @@
 ---
 applications:
-- name: springbootfile
+- name: Sample
   path: /github/workspace/build/libs/gradle-github-actions-example.jar
-  buildpacks: sap_java_buildpack
-  #buildpacks: https://github.com/cloudfoundry/java-buildpack.git
+ buildpacks: sap_java_buildpack
+...
