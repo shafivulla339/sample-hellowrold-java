@@ -85,4 +85,5 @@ jobs:
          sudo apt-get update
          sudo apt-get install cf8-cli
          cf login -a https://api.cf.ap21.hana.ondemand.com -u ramyaravindra999@gmail.com -p ${{ secrets.CF_PASSWORD }} -o 6fece677trial -s prod
+         pwd
 
