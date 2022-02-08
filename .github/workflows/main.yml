@@ -82,7 +82,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
          name: my-artifact
-         path: /build/libs
+         path: ${{ github.workspace }}/build/libs
           
       #- name: step to deploy CF
         #run: |
