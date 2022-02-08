@@ -89,6 +89,6 @@ jobs:
          pwd
          cd build
          cd libs
-         cf push test -f gradle-github-actions-example.jar
+         cf push test gradle-github-actions-example.jar
          
 
