@@ -3,7 +3,7 @@ name: Pipeline
 
 on:
   push:
-    branches: [ master ]
+    branches: [ workitem4_splitmain2ci-and-cd ]
     
 #starting buildjob
 jobs:
