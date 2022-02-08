@@ -90,6 +90,6 @@ jobs:
          cd build
          cd libs
          pwd
-         cf push test gradle-github-actions-example.jar
+         cf push -p test gradle-github-actions-example.jar
          
 
