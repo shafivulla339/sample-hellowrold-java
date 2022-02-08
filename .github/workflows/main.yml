@@ -78,6 +78,12 @@ jobs:
           #space: prod
           #manifest: manifest.yml
           
+      - name: artifact upload
+        uses: actions/upload-artifact@v2
+        with:
+         name: my-artifact
+         path: /build/libs
+          
       - name: step to deploy CF
         run: |
          #wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
