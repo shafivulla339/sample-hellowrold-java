@@ -3,7 +3,7 @@ name: Pipeline
 
 on:
   push:
-    branches: [ master ]
+    branches: [ workitem5_dockeraction ]
     
 #starting buildjob
 jobs:
