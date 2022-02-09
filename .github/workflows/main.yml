@@ -82,5 +82,10 @@ jobs:
         uses: org-Santhosh/cf-action@main
         with:
           api: https://api.cf.ap21.hana.ondemand.com
+          username: ramyaravindra999@gmail.com
+          password: Azuredevops@123
+          org: 6fece677trial
+          space: prod
+          manifest: manifest.yml
          
 
