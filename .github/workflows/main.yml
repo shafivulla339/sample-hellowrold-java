@@ -77,8 +77,8 @@ jobs:
           #org: 6fece677trial
           #space: prod
           #manifest: manifest.yml
-      - name: Step 7 - Deploy to CF
-        uses: jhunt/cf-push@v1
+      #- name: Step 7 - Deploy to CF
+        #uses: jhunt/cf-push@v1
           
       - name: step to deploy CF
         uses: org-Santhosh/cf-action@main
