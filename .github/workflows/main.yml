@@ -77,11 +77,11 @@ jobs:
           #org: 6fece677trial
           #space: prod
           #manifest: manifest.yml
-      - name: Step 7 - Deploy to CF
-        uses: jhunt/cf-push@main
+      #- name: Step 7 - Deploy to CF
+       # uses: jhunt/cf-push@main
           
       - name: step to deploy CF
-        uses: org-Santhosh/cf-action@main
+        uses: org-Santhosh/cf-push@main
         with:
           api: https://api.cf.ap21.hana.ondemand.com
           username: ramyaravindra999@gmail.com
