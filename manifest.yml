@@ -2,3 +2,4 @@
 applications:
 - name: application-name-final
   path: /github/workspace/src/gradle-github-actions-example.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack#v4.17.1
