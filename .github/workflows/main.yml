@@ -3,7 +3,7 @@ name: Pipeline
 
 on:
   push:
-    branches: [ master ]
+    branches: [ branch_checkingjhunt ]
     
 #starting buildjob
 jobs:
@@ -68,28 +68,12 @@ jobs:
           #host: ${{ secrets.SQHost }} # Variable set in the Github Secrets
           #token: ${{ secrets.SQToken }} # Variable set in the Github Secrets 
         
-      #- name: Step 7 - Deploy to CF
-        #uses: jhunt/cf-push@v1
-        #with:
-          #api: https://api.cf.ap21.hana.ondemand.com
-          #username: ramyaravindra999@gmail.com
-          #password: Azuredevops@123
-          #org: 6fece677trial
-          #space: prod
-          #manifest: manifest.yml
-          
-      - name: step to deploy CF
-        run: |
-         #wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-         #echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-         sudo apt-get update
-         sudo apt-get install cf8-cli
-         cf login -a https://api.cf.ap21.hana.ondemand.com -u ramyaravindra999@gmail.com -p ${{ secrets.CF_PASSWORD }} -o 6fece677trial -s prod
-         #cf login -a ${{ secrets.CF_API }} -u ${{ secrets.CF_USERNAME }}m -p ${{ secrets.CF_PASSWORD }} -o ${{ secrets.CF_ORGANISATION }} -s ${{ secrets.CF_SPACE }}
-         pwd
-         cd build
-         cd libs
-         pwd
-         cf push test -p gradle-github-actions-example.jar --no-route
-         
-
+      - name: Step 7 - Deploy to CF
+        uses: jhunt/cf-push@v1
+        with:
+          api: https://api.cf.ap21.hana.ondemand.com
+          username: ramyaravindra999@gmail.com
+          password: Azuredevops@123
+          org: 6fece677trial
+          space: prod
+          manifest: manifest.yml
