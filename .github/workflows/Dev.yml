@@ -13,12 +13,19 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Step 1 - Checkout main branch from GitHub 
         uses: actions/checkout@v2
-        
-      - name: Download Fortify ScanCentral Client
-        uses: fortify/gha-setup-scancentral-client@v1
         with:
-          version: 21.2.0  
-          #client-auth-token: ${{ secrets.CLIENT_AUTH_TOKEN }}
+          # Fetch all commits
+          fetch-depth: 0
+
+      - name: Semantic versioning
+        id: versioning
+        uses: PaulHatch/semantic-version@v4.0.2
+        with:
+          branch: main
+          tag_prefix: "v"
+          major_pattern: "BREAKING CHANGE:"
+          minor_pattern: "feat:"
+          format: "v${major}.${minor}.${patch}-prerelease${increment}"
           
       #- name: Perform SAST Scan
         #run: |
